@@ -7,7 +7,7 @@ metadata = MetaData()
 db = SQLAlchemy(metadata=metadata)
 
 
-class Pet(db.Model, SerializerMixin):
+class Pet(db.Model):
     __tablename__ = 'pets'
 
     id = db.Column(db.Integer, primary_key=True)
