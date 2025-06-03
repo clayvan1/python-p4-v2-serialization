@@ -20,7 +20,7 @@ def index():
     body = {'message': 'Welcome to the pet directory!'}
     return make_response(body, 200)
 
-
+@app.route('/pets')
 @app.route('/pets/<int:id>')
 def pet_by_id(id):
     pet = Pet.query.filter(Pet.id == id).first()
